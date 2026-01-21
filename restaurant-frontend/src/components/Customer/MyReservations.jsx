@@ -55,8 +55,12 @@ function MyReservations({ refreshTrigger }) {
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">My Reservations</h2>
+    // <div className="bg-white p-6 rounded-lg shadow-md">
+    //<h2 className="text-2xl font-bold mb-4">My Reservations</h2>
+    <div className="bauhaus-card form-card">
+      <div className="card-accent-red"></div>
+      <h2 className="card-title">My Reservations</h2>
+
       
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -91,7 +95,8 @@ function MyReservations({ refreshTrigger }) {
                 </div>
                 <button
                   onClick={() => handleCancel(reservation._id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  // className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  className="submit-button primary-yellow"
                 >
                   Cancel
                 </button>

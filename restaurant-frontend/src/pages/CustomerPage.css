@@ -1,0 +1,156 @@
+/* CustomerPage.css - Bauhaus Dashboard */
+
+:root {
+  --bauhaus-red: #E1341E;
+  --bauhaus-blue: #005B96;
+  --bauhaus-yellow: #FFD700;
+  --bauhaus-black: #1a1a1a;
+  --bauhaus-white: #FAFAFA;
+}
+
+.bauhaus-page-container {
+  min-height: 100vh;
+  background-color: var(--bauhaus-white);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.bauhaus-header {
+  background: var(--bauhaus-black);
+  color: white;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 8px solid var(--bauhaus-blue);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.mini-shapes {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.s-circle { width: 12px; height: 12px; background: var(--bauhaus-red); border-radius: 50%; }
+.s-square { width: 12px; height: 12px; background: var(--bauhaus-yellow); }
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 2rem;
+}
+
+.welcome-text { font-size: 0.75rem; text-transform: uppercase; opacity: 0.8; }
+.user-name { font-weight: 700; color: var(--bauhaus-yellow); }
+
+.logout-button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-button:hover {
+  background: var(--bauhaus-red);
+  border-color: var(--bauhaus-red);
+}
+
+/* Main Layout */
+.bauhaus-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 3rem;
+}
+
+/* Bauhaus Card Components */
+.bauhaus-card {
+  background: white;
+  padding: 2.5rem;
+  border: 3px solid var(--bauhaus-black);
+  box-shadow: 12px 12px 0px var(--bauhaus-black);
+  position: relative;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  border-left: 10px solid var(--bauhaus-red);
+  padding-left: 1rem;
+}
+
+/* Reservation Item Blocks */
+.reservation-item {
+  border: 2px solid var(--bauhaus-black);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  transition: transform 0.2s;
+  background: white;
+}
+
+.reservation-item:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px var(--bauhaus-blue);
+}
+
+.res-table-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--bauhaus-blue);
+}
+
+.res-details p {
+  margin: 0.25rem 0;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Red Cancel Button */
+.cancel-btn {
+  background: var(--bauhaus-red);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
